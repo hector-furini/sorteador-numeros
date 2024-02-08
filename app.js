@@ -5,7 +5,10 @@ function sortear() {
     let sorteados = [];
     let numero;
 
-    validarDados(quantidadeNumeros, numeroMinimo, numeroMaximo);
+    let sucesso = validarDados(quantidadeNumeros, numeroMinimo, numeroMaximo);
+    if (sucesso == false) {
+        return;
+    }
 
     for (let i = 0; i < quantidadeNumeros; i++) {
         numero = obterNumeroAleatorio(numeroMinimo, numeroMaximo);
@@ -27,7 +30,11 @@ function validarDados(quantidadeNumeros, numeroMinimo, numeroMaximo) {
     //Valida se todos os campos foram preenchidos
     if (isNaN(quantidadeNumeros) || isNaN(numeroMinimo) || isNaN(numeroMaximo) ) {
         alert ('Por favor, preencha todos os campos.');
+        return false; 
+    } else {
+        return true;
     }
+
 }
 
 function obterNumeroAleatorio(min, max) {
