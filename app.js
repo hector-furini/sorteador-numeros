@@ -5,8 +5,8 @@ function sortear() {
     let sorteados = [];
     let numero;
 
-    let sucesso = validarDados(quantidadeNumeros, numeroMinimo, numeroMaximo);
-    if (sucesso == false) {
+    let continuarFuncao = validarDados(quantidadeNumeros, numeroMinimo, numeroMaximo);
+    if (continuarFuncao == false) {
         return;
     }
 
@@ -27,10 +27,16 @@ function sortear() {
 
 function validarDados(quantidadeNumeros, numeroMinimo, numeroMaximo) {
 
-    //Valida se todos os campos foram preenchidos
+    //Valida se todos os campos foram preenchido, se o numero Maximo é menor que o mínimo e se o intervalo é suficiente
     if (isNaN(quantidadeNumeros) || isNaN(numeroMinimo) || isNaN(numeroMaximo) ) {
         alert ('Por favor, preencha todos os campos.');
         return false; 
+    } else if (numeroMinimo >= numeroMaximo) {
+        alert('Por favor, confira os dados digitados');
+        return false;
+    } else if ((numeroMaximo - numeroMinimo + 1) < quantidadeNumeros) {
+        alert('Intervalo de números muito pequeno!');
+        return false;
     } else {
         return true;
     }
