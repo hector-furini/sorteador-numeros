@@ -2,6 +2,8 @@
 
 <h2>Sobre</h2>
 <p>Projeto utilizado nos cursos de lógica de programação da Alura.<p>
+<p>Proposta de um projeto de um programa capaz de sortear uma quantidade de números</p>
+<p>escolhida em um determinado intervalo.</p>
 
 ## Tecnologias
 <div>
@@ -16,6 +18,8 @@
 
 <h2>About</h2>
 <p>Project used in Alura's programming logic courses.<p>
+<p>Proposal for a project for a program capable of drawing a certain amount of numbers</p>
+<p>chosen from a given range</p>
 
 ## Technologies
 <div>
